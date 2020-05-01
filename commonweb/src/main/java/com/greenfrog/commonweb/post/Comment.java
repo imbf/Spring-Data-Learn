@@ -1,6 +1,12 @@
 package com.greenfrog.commonweb.post;
 
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
+
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Comment {
@@ -18,6 +24,52 @@ public class Comment {
     private int down;
 
     private boolean best;
+
+    @CreatedDate
+    private Date created;
+
+    @CreatedBy
+    @ManyToOne
+    private Account createdBy;
+
+    @LastModifiedDate
+    private Date updated;
+
+    @LastModifiedBy
+    @ManyToOne
+    private Account updatedBy;
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public Account getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(Account createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public Date getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+    public Account getUpdatedBy() {
+        return updatedBy;
+    }
+
+    public void setUpdatedBy(Account updatedBy) {
+        this.updatedBy = updatedBy;
+    }
 
     public Long getId() {
         return id;
