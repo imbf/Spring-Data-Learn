@@ -1,4 +1,4 @@
-package me.whiteship.commonweb.post;
+package com.greenfrog.commonweb.post;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

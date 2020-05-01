@@ -1,4 +1,4 @@
-package me.whiteship.commonweb.post;
+package com.greenfrog.commonweb.post;
 
 import javax.persistence.*;
 import java.util.Date;

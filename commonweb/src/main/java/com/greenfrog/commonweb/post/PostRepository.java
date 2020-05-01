@@ -1,4 +1,4 @@
-package me.whiteship.commonweb.post;
+package com.greenfrog.commonweb.post;
 
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
